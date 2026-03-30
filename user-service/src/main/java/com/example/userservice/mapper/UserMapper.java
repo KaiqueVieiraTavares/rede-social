@@ -1,8 +1,8 @@
 package com.example.userservice.mapper;
 
-import com.example.userservice.dto.request.CreateUserDTO;
-import com.example.userservice.dto.request.UpdateUserDTO;
-import com.example.userservice.dto.response.UserResponseDTO;
+import com.example.userservice.dto.request.user.CreateUserDTO;
+import com.example.userservice.dto.request.user.UpdateUserDTO;
+import com.example.userservice.dto.response.user.UserResponseDTO;
 import com.example.userservice.entity.UserEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;

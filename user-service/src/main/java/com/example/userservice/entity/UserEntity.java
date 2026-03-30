@@ -24,8 +24,20 @@ public class UserEntity {
     @Column(unique = true)
     private String email;
     private String password;
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    private ProfileEntity profileEntity;
     @CreationTimestamp
     private LocalDateTime createdAt;
     @UpdateTimestamp
     private LocalDateTime updatedAt;
+
+    public void setProfileEntity(ProfileEntity profile){
+        if(this.profileEntity!=null){
+            this.profileEntity.setUser(null);
+        }
+        if(profile!=null){
+            profile.setUser(this);
+        }
+        this.profileEntity = profile;
+    }
 }
