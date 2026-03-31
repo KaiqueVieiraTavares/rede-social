@@ -13,7 +13,9 @@ public interface ProfileMapper {
 
      ProfileResponseDTO toDto(ProfileEntity profileEntity);
      @Mapping(target = "user", ignore = true)
+     @Mapping(target = "id", ignore = true)
      ProfileEntity toEntity(CreateProfileDTO createProfileDTO);
      @Mapping(target = "user", ignore = true)
+     @Mapping(target = "id", ignore = true)
      void updateProfile(UpdateProfileDTO updateProfileDTO, @MappingTarget ProfileEntity profileEntity);
 }
